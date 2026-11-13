@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "uploadUrlValidityMinutes": 15,
+  "interactions": [
+    {
+      "externalInteractionId": "SAMPLE-INT-0001",
+      "channelType": "PHONE_CALL",
+      "direction": "INBOUND",
+      "startTime": "2026-11-12T14:00:00Z",
+      "endTime": "2026-11-12T14:00:05Z",
+      "externalContactId": "SAMPLE-CONTACT-0001",
+      "externalContactStartTime": "2026-11-12T14:00:00Z",
+      "subject": "Sample S&F test call",
+      "participants": [
+        {
+          "participantType": "AGENT_USER",
+          "participantTo": "+15551230001",
+          "participantIdentifier": "agent-001",
+          "isLeadingAgentUser": true,
+          "externalIdentifier": {
+            "systemName": "Offline_Calls",
+            "identifierType": "AGENT_ID",
+            "value": "70547036"
+          },
+          "participantMediaReferences": [
+            {
+              "mediaId": "media-audio-1",
+              "streamId": 0
+            }
+          ]
+        },
+        {
+          "participantType": "CUSTOMER",
+          "participantFrom": "+15559870002",
+          "participantIdentifier": "customer-001",
+          "participantMediaReferences": [
+            {
+              "mediaId": "media-audio-1",
+              "streamId": 1
+            }
+          ]
+        }
+      ],
+      "media": [
+        {
+          "mediaId": "media-audio-1",
+          "mediaType": "AUDIO",
+          "fileName": "sample-call.wav",
+          "fileType": "WAV",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "e9917326013b8330e06564660eaaee6f"
+          },
+          "startTime": "2026-11-12T14:00:00Z",
+          "endTime": "2026-11-12T14:00:05Z"
+        }
+      ]
+    }
+  ]
+}

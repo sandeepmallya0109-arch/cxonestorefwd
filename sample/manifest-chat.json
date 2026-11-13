@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "uploadUrlValidityMinutes": 15,
+  "interactions": [
+    {
+      "externalInteractionId": "SAMPLE-CHAT-0001",
+      "channelType": "CHAT",
+      "direction": "INBOUND",
+      "startTime": "2026-11-12T15:00:00Z",
+      "endTime": "2026-11-12T15:02:00Z",
+      "externalContactId": "SAMPLE-CONTACT-0002",
+      "externalContactStartTime": "2026-11-12T15:00:00Z",
+      "subject": "Sample chat with attachment",
+      "participants": [
+        {
+          "participantType": "AGENT_USER",
+          "participantIdentifier": "agent-001",
+          "participantTo": "web-chat",
+          "isLeadingAgentUser": true,
+          "externalIdentifier": {
+            "systemName": "Offline_Calls",
+            "identifierType": "AGENT_ID",
+            "value": "70547036"
+          },
+          "participantMediaReferences": [
+            {
+              "mediaId": "media-text-1"
+            },
+            {
+              "mediaId": "media-att-1"
+            }
+          ]
+        },
+        {
+          "participantType": "CUSTOMER",
+          "participantIdentifier": "customer-002",
+          "participantFrom": "web-chat",
+          "participantMediaReferences": [
+            {
+              "mediaId": "media-text-1"
+            }
+          ]
+        }
+      ],
+      "media": [
+        {
+          "mediaId": "media-text-1",
+          "mediaType": "TEXT",
+          "content": "Customer: Hi, I need help.\nAgent: Sure, happy to help.",
+          "startTime": "2026-11-12T15:00:00Z",
+          "endTime": "2026-11-12T15:02:00Z"
+        },
+        {
+          "mediaId": "media-att-1",
+          "mediaType": "ATTACHMENT",
+          "fileName": "sample-attachment.txt",
+          "fileType": "TXT",
+          "checksum": {
+            "algorithm": "MD5",
+            "value": "5a02025d5ff4a49059aeb49f2390fe80"
+          },
+          "startTime": "2026-11-12T15:01:00Z",
+          "endTime": "2026-11-12T15:01:00Z"
+        }
+      ]
+    }
+  ]
+}
