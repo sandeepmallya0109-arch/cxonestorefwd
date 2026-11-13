@@ -99,8 +99,8 @@ const log = (m, c='') => { const d=document.createElement('div'); d.className=c;
 const show = o => { $('out').hidden=false; $('out').textContent = typeof o==='string'?o:JSON.stringify(o,null,2); };
 let jobId = null;
 
-try { $('base').value = localStorage.getItem('sf_base') || ''; } catch(e){}
-$('base').addEventListener('change', () => { try{localStorage.setItem('sf_base',$('base').value)}catch(e){} });
+try { $('base').value = localStorage.getItem('sf_base_v2') || 'https://api-au1.niceincontact.com'; } catch(e){}
+$('base').addEventListener('change', () => { try{localStorage.setItem('sf_base_v2',$('base').value)}catch(e){} });
 
 /* ---------- token ---------- */
 $('getToken').onclick = async () => {
