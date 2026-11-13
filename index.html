@@ -33,12 +33,12 @@
 
   <section>
     <h2>1. Connection</h2>
-    <label style="font-weight:400"><input type="checkbox" id="useProxy"> Use local proxy (fixes CORS errors — run <code>python3 server.py</code> and open <code>http://localhost:8080</code>)</label>
+    <label style="font-weight:400"><input type="checkbox" id="useProxy"> Use local proxy (optional fallback only if you get a CORS/network error — run <code>python3 server.py</code> and open <code>http://localhost:8080</code>)</label>
     <details id="tokenBox" open style="margin-top:8px">
       <summary><b>Get a token from an access key</b></summary>
       <label for="authUrl">Auth token URL</label>
-      <input id="authUrl" type="text" value="https://au1.nice-incontact.com/authentication/v1/token/access-key">
-      <div class="hint">Pattern: <code>https://&lt;area&gt;.nice-incontact.com/authentication/v1/token/access-key</code> (au1, na1, eu1). Staging hosts differ — confirm with your admin.</div>
+      <input id="authUrl" type="text" value="https://api-au1.niceincontact.com/authentication/v1/token/access-key">
+      <div class="hint">Pattern: <code>https://api-&lt;area&gt;.niceincontact.com/authentication/v1/token/access-key</code> (au1, na1, eu1). Use the same API host as below — it allows direct browser calls.</div>
       <label for="keyId">Access Key ID</label>
       <input id="keyId" type="text" autocomplete="off">
       <label for="keySecret">Access Key Secret</label>
@@ -271,7 +271,7 @@ $('interactions').onclick = async () => {
   if(c.keySecret) $('keySecret').value=c.keySecret;
   if(c.authUrl) $('authUrl').value=c.authUrl;
   if(c.baseUrl && !$('base').value) $('base').value=c.baseUrl; }
-$('useProxy').checked = location.protocol.startsWith('http');
+$('useProxy').checked = false; // direct browser calls work; tick only as a fallback
 $('loadSample').click();
 </script>
 </body>
